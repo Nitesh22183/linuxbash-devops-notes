@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "starting the background process.."
+sleep 300 &
+echo " searching the process in the system.."
+ps -ef | grep sleep
