@@ -40,3 +40,28 @@ Standardize: Every modern Linux distribution (Ubuntu, CentOS, Debian) uses it, s
 Automate Recovery: You can configure a service to "Auto-Restart" if it fails.
 
 Check Health: It gives you a single place to see why a service isn't starting via status logs.
+
+
+9-where logs are stored?
+A-Logs are stored in /var/log/ >>/var/log/sylog>>/var/log/nginx/error.log
+
+10-Access Log vs. Error Log?
+A- Access Log (access.log): Records every successful request.
+
+Example: "User A just loaded the homepage from Chrome." 👤✅
+
+Error Log (error.log): Records only when something fails.
+
+Example: "Nginx couldn't start because Port 80 is taken." ❌⚠️
+
+11-Why grep is useful? 🔍
+A- Filter Noise: It hides the 99% of data you don't care about so you can find the 1% that matters (like searching for "ERROR" in a sea of "INFO").
+
+Pipe Power: You can "pipe" (|) the output of any command into grep.
+
+Example: ps aux | grep nginx (Finds only Nginx processes).
+
+12-How logs help in troubleshooting? 🩺
+A- Logs are the "Black Box" of your server. Without them, you are just guessing. In DevOps, we use logs to follow the "Trail of Evidence":
+
+
